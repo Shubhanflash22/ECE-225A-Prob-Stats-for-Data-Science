@@ -49,3 +49,46 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install catboost pandas numpy scikit-learn matplotlib seaborn statsmodels
+```
+## Usage
+
+1. **Data Preparation:**  
+   Place the CSV files (`annual-co2-emissions-per-country.csv`, `world-data-2023.csv`, etc.) in the `/content/` directory or update the paths in the code.
+
+2. **Run Analysis:**  
+   * Execute the Jupyter Notebook `225A_Code - Final Version.ipynb` to process data and train models.  
+   * Alternatively, use the script version to generate the EDA report.
+
+```python
+# To generate the automated EDA report (requires ydata-profiling)
+from ydata_profiling import ProfileReport
+
+report = ProfileReport(world_merged_df, title="Auto EDA Report")
+report.to_file("eda_report.html")
+```
+## Model Performance
+
+The project evaluates several regression algorithms. Based on the experimental results, **Ridge Regression with MinMaxScaler** provided the best fit:
+
+| Model                | R² Score   | RMSE       |
+| -------------------- | ---------- | ---------- |
+| **Ridge Regression** | **0.8754** | **0.4698** |
+| Random Forest        | 0.7076     | 0.7198     |
+| Gradient Boosting    | 0.7268     | 0.6958     |
+| HistGradientBoosting | 0.7411     | 0.6773     |
+
+## Results
+
+* **Top Predictors:** Social support (0.83 correlation), Log GDP per capita (0.78), and Healthy life expectancy (0.74) are the strongest positive drivers of happiness.
+* **Negative Impactors:** Higher birth rates and maternal health risks are strongly correlated with lower national happiness scores.
+* **Regional Findings:** Sub-Saharan Africa shows the strongest negative regional correlation with ladder scores, while Western Europe and North America show positive correlations.
+
+## Future Work
+
+* **Temporal Analysis:** Incorporate time-series data to see how happiness trends change after major global events.
+* **Deep Learning:** Experiment with Neural Networks to capture non-linear relationships between social freedom and corruption.
+* **Environmental Focus:** Deepen the investigation into how climate change policies (beyond CO2) impact national well-being.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
