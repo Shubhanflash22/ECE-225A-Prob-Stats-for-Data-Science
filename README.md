@@ -40,7 +40,7 @@ The project aggregates data from four primary sources:
 ## Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/happiness-equation.git
+git clone https://github.com/yourusername/ECE-225A-Prob-Stats-for-Data-Science.git
 cd happiness-equation
 
 # Create a virtual environment
@@ -53,10 +53,11 @@ pip install catboost pandas numpy scikit-learn matplotlib seaborn statsmodels
 ## Usage
 
 1. **Data Preparation:**  
-   Place the CSV files (`annual-co2-emissions-per-country.csv`, `world-data-2023.csv`, etc.) in the `/content/` directory or update the paths in the code.
+   Place the CSV files (`annual-co2-emissions-per-country.csv`, `world-data-2023.csv`, etc.) in the `/Base Data/` directory or update the paths in the code.
 
 2. **Run Analysis:**  
-   * Execute the Jupyter Notebook `225A_Code - Final Version.ipynb` to process data and train models.  
+   * cd into the Codes folder
+   * Execute the Jupyter Notebook `225A_Code - Final Version Cleaned.ipynb` to process data and train models.  
    * Alternatively, use the script version to generate the EDA report.
 
 ```python
@@ -88,6 +89,19 @@ The project evaluates several regression algorithms. Based on the experimental r
 * **Temporal Analysis:** Incorporate time-series data to see how happiness trends change after major global events.
 * **Deep Learning:** Experiment with Neural Networks to capture non-linear relationships between social freedom and corruption.
 * **Environmental Focus:** Deepen the investigation into how climate change policies (beyond CO2) impact national well-being.
+
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@software{excavator_activity_recognition,
+  author = {Shubhan Mital},
+  title = {Happiness Equation},
+  year = {2025},
+  url = {https://github.com/Shubhanflash22/ECE-225A-Prob-Stats-for-Data-Science}
+}
+```
 
 ## License
 
