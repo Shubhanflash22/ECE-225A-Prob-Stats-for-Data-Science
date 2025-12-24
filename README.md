@@ -95,7 +95,7 @@ The project evaluates several regression algorithms. Based on the experimental r
 If you use this work, please cite:
 
 ```bibtex
-@software{excavator_activity_recognition,
+@software{ECE-225A-Prob-Stats-for-Data-Science,
   author = {Shubhan Mital},
   title = {Happiness Equation},
   year = {2025},
