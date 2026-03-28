@@ -11,6 +11,7 @@ A comprehensive machine learning project that analyzes economic, social, and env
 * [Model Performance](#model-performance)
 * [Results](#results)
 * [Future Work](#future-work)
+* [Citation](#citation)
 * [License](#license)
 
 ## Project Overview
